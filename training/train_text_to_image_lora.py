@@ -20,7 +20,11 @@ from peft import LoraConfig, get_peft_model, TaskType
 from safetensors.torch import save_file
 from PIL import Image
 
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",  # 시간 포함
+    datefmt="%Y-%m-%d %H:%M:%S"  # 시간 포맷 (원하는 대로 수정 가능)
+)
 logger = logging.getLogger(__name__)
 
 
